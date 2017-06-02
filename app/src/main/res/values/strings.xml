@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">bee-permissionUtils</string>
+    <string name="strict">Strict</string>
+    <string name="mild">mild</string>
+    <string name="notify">Note</string>
+    <string name="to_settings_set">Go to set the interface to open the permissions</string>
+    <string name="go_to_set">To set up</string>
+    <string name="cancel">Cancel</string>
+</resources>
