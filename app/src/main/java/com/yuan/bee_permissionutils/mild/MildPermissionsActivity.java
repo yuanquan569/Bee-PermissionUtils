@@ -15,10 +15,9 @@ import com.yuan.bee_permissionutils.common.PermissionsChecker;
 public class MildPermissionsActivity extends Activity{
 
     private PermissionsChecker permissionsChecker;
-    private static final String[] PERMISSIONS = new String[]{
-            Manifest.permission.RECORD_AUDIO,
-            Manifest.permission.MODIFY_AUDIO_SETTINGS
-    };
+
+    private static final int PERMISSION_REQUEST_CODE = 0; // 系统权限管理页面的参数
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +29,8 @@ public class MildPermissionsActivity extends Activity{
     @Override
     protected void onResume() {
         super.onResume();
-        if(permissionsChecker.lacksPermissions(PERMISSIONS)){
-
+        if(permissionsChecker.lacksPermissions(Manifest.permission.CAMERA)){
+            MildPermissionsUtils.requestPermissions(this,Manifest.permission.CAMERA,PERMISSION_REQUEST_CODE);
         }
     }
 }
